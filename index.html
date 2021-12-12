@@ -257,6 +257,19 @@
         text-decoration: none;
         color: #222;
       }
+      @media print {
+        .introduction-container .introLink {
+          display: none;
+        }
+      }
+      .introduction-container .introLinkPrint {
+        display: none;
+      }
+      @media print {
+        .introduction-container .introLinkPrint {
+          display: block;
+        }
+      }
       .introduction-container .content,
       .introduction-container .firstSentence {
         margin: 40px 0;
@@ -548,6 +561,11 @@
       .experience-container .jobLink:hover {
         border-bottom: 2px solid #203466;
       }
+      @media print {
+        .experience-container .jobLink {
+          display: none;
+        }
+      }
       .experience-container .jobContent {
         min-height: 100px;
         margin: 0 20px;
@@ -692,7 +710,6 @@
       }
       .education-container .educationContent {
         page-break-after: always;
-        page-break-before: always;
       }
       .education-container .educationContainer {
         padding-left: 20px;
@@ -1125,6 +1142,11 @@
       .interests-container h5 {
         color: #254068;
       }
+      @media print {
+        .interests-container .interestsContainer {
+          display: none;
+        }
+      }
       .interests-container .chipList {
         list-style: none;
         color: #203466;
@@ -1158,6 +1180,11 @@
         padding: 30px 15px;
         max-width: 1000px;
         text-align: center;
+      }
+      @media print {
+        .footer-container .container {
+          padding-top: 128px;
+        }
       }
       .footer-container .socialLinkPrint {
         display: none;
@@ -1212,6 +1239,8 @@
         color: #fff;
       }
     </style>
+
+    <noscript data-n-css=""></noscript>
 
     <style data-href="https://fonts.googleapis.com/css?family=Roboto:400,700">
       @font-face {
@@ -1399,7 +1428,7 @@
                 href="mailto:hello@carson.kiwi"
                 class="introLink"
                 ><b class="blue"> hello@carson.kiwi</b></a
-              >
+              ><b class="blue introLinkPrint">hello@carson.kiwi</b>
             </div>
             <div style="display: block; height: 72px"></div>
           </div>
@@ -1437,8 +1466,8 @@
                     positive outcomes for internal and external clients. A good
                     part of my time at Middleware NZ was focused delivering an
                     internal product, the Open Banking Accelerator and
-                    Engagement Platform, which was successfully sold and
-                    implemented within multiple banking clients.
+                    Engagement Platform, which was successfully implemented
+                    within multiple banking clients.
                   </p>
                   <a class="jobLink" href="#Projects"
                     ><strong
@@ -1519,10 +1548,10 @@
               <h1>Education</h1>
               <div class="educationContainer">
                 <h2 class="content">
-                  Bachelor of Engineering, Software Engineering, First Class
-                  Honours
+                  Bachelor of Engineering, Software Engineering,
+                  First Class Honours
                 </h2>
-                <h3 class="content">Victoria University of Wellington</h3>
+                <h3 class="content">Victoria University of Wellington</h3>
                 <em class="content">2007-2012</em>
               </div>
             </div>
@@ -1703,6 +1732,46 @@
                   </div>
                 </div>
               </div>
+              <div class="project">
+                <div class="projectContainer">
+                  <div class="projectContent">
+                    <div class="projectTitleContainer">
+                      <h2 class="projectTitle">Online Banking</h2>
+                      <em>Westpac</em>
+                    </div>
+                    <div>
+                      <p class="projectBrief">
+                        I was part of a Westpac team with a goal to improve
+                        their online banking experience. I supported the
+                        developers of the project, mediating communications
+                        between development teams. I improved automation in
+                        local, development, and test environments helping
+                        developers become more autonomous. After two months my
+                        role extended to a technical lead of a team of five,
+                        responsible for feature development in the middleware.
+                      </p>
+                      <ul class="projectBullets">
+                        <li>
+                          Trusted as the custodian of environments relied on by
+                          a team of 60+.
+                        </li>
+                        <li>Lead and mentor of a team of five.</li>
+                        <li>
+                          Proposed and owned developer tooling and experience
+                          improvements.
+                        </li>
+                        <li>
+                          Implemented a Javascript framework that supported
+                          other teams.
+                        </li>
+                        <li>
+                          Took ownership for the security feature of the client.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1726,12 +1795,8 @@
               <div>
                 <span class="text"><b>hello@carson.kiwi</b></span>
               </div>
-              <div class="socialLinkPrint">
-                GitHub https://github.com/Kauabunga
-              </div>
-              <div class="socialLinkPrint">
-                Linkedin https://nz.linkedin.com/in/carsonbruce
-              </div>
+              <div class="socialLinkPrint">github.com/Kauabunga</div>
+              <div class="socialLinkPrint">nz.linkedin.com/in/carsonbruce</div>
               <a
                 href="https://github.com/Kauabunga"
                 target="_blank"
@@ -1763,7 +1828,7 @@
         "props": { "pageProps": {} },
         "page": "/",
         "query": {},
-        "buildId": "TriTOVHVUcjHHKDwwyfn3",
+        "buildId": "b8UVXiGjTErfV4eZVNhUW",
         "nextExport": true,
         "autoExport": true,
         "isFallback": false,
